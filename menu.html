@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Yashoday | Digital Menu</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0f1c2e; /* Dark Blue */
+            --accent: #c5a059;  /* Gold */
+            --bg: #fdfaf5;
+            --white: #ffffff;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Poppins', sans-serif; background-color: var(--bg); color: #333; }
+
+        header {
+            background: var(--primary);
+            color: var(--accent);
+            text-align: center;
+            padding: 2rem 1rem;
+            border-bottom: 4px solid var(--accent);
+        }
+
+        /* Updated Navigation Styling */
+        .nav-container {
+            overflow-x: auto;
+            white-space: nowrap;
+            background: var(--accent);
+            padding: 12px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .nav-container a {
+            color: var(--primary);
+            text-decoration: none;
+            padding: 5px 15px;
+            font-weight: 700;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            display: inline-block;
+            border-right: 1px solid rgba(15, 28, 46, 0.1);
+        }
+
+        .nav-container a:last-child { border-right: none; }
+
+        .container { max-width: 800px; margin: 20px auto; padding: 0 15px; }
+
+        .category-section { margin-bottom: 50px; scroll-margin-top: 80px; }
+        
+        .category-title {
+            font-family: 'Playfair Display', serif;
+            background: var(--primary);
+            color: var(--accent);
+            padding: 12px 20px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+            text-align: center;
+            letter-spacing: 1px;
+        }
+
+        /* Sub-header for grouped Indian sections */
+        .sub-category-title {
+            color: var(--primary);
+            font-weight: 700;
+            border-bottom: 2px solid var(--accent);
+            padding-bottom: 5px;
+            margin: 30px 0 15px 0;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .menu-list { display: flex; flex-direction: column; gap: 2px; }
+
+        .menu-row {
+            background: var(--white);
+            padding: 12px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #eee;
+            border-left: 4px solid transparent;
+            transition: 0.2s;
+        }
+
+        .menu-row:hover {
+            border-left: 4px solid var(--accent);
+            background: #fffdf9;
+            padding-left: 25px;
+        }
+
+        .item-name { font-weight: 500; font-size: 0.95rem; color: #2c3e50; }
+        .item-price { font-weight: 700; color: var(--accent); font-family: sans-serif; font-size: 1rem; }
+
+        .contact-card {
+            background: var(--primary);
+            color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            margin: 60px 0;
+            border: 2px solid var(--accent);
+        }
+
+        footer { text-align: center; padding: 30px; font-size: 0.8rem; color: #666; background: #eee; }
+        
+        .nav-container::-webkit-scrollbar { height: 0px; background: transparent; }
+    </style>
+</head>
+<body>
+
+<header>
+    <p style="font-size: 0.9rem; letter-spacing: 2px; margin-bottom: 5px;">JAI JINENDRA — WELCOME WITH WARMTH</p>
+    <h1 style="font-family: 'Playfair Display', serif; font-size: 2.5rem;">HOTEL YASHODAY</h1>
+    <p style="letter-spacing: 1px; font-size: 0.9rem;">Cleanliness • Comfort • Hospitality</p>
+</header>
+
+<div class="nav-container">
+    <a href="#tea">Tea & Breakfast</a>
+    <a href="#maggi">Maggi & Pasta</a>
+    <a href="#pizza">Pizza & Burger</a>
+    <a href="#sandwich">Sandwiches</a>
+    <a href="#chinese">Chinese</a>
+    <a href="#salad">Salad & Raita</a>
+    <a href="#indian">Indian Main Course</a>
+    <a href="#kulfi">Special Kulfi</a>
+    <a href="#shakes">Shakes & Desserts</a>
+</div>
+
+<div class="container">
+
+    <section id="tea" class="category-section">
+        <h2 class="category-title">Tea & Coffee</h2>
+        <div class="menu-list">
+            <div class="menu-row"><span class="item-name">Classic Tea</span><span class="item-price">30</span></div>
+            <div class="menu-row"><span class="item-name">Black Tea</span><span class="item-price">30</span></div>
+            <div class="menu-row"><span class="item-name">Lemon Tea</span><span class="item-price">30</span></div>
+            <div class="menu-row"><span class="item-name">Hot Coffee</span><span class="item-price">40</span></div>
+            <div class="menu-row"><span class="item-name">Cappuccino</span><span class="item-price">60</span></div>
+            <div class="menu-row"><span class="item-name">Signature Masala Tea</span><span class="item-price">50</span></div>
+            <div class="menu-row"><span class="item-name">Milk</span><span class="item-price">40</span></div>
+            <div class="menu-row"><span class="item-name">Bournvita Milk (Hot/Cold)</span><span class="item-price">55</span></div>
+            <div class="menu-row"><span class="item-name">Mineral Water</span><span class="item-price">20</span></div>
+            <div class="menu-row"><span class="item-name">Cold Drink</span><span class="item-price">40</span></div>
+        </div>
+    </section>
+
+    <section id="breakfast" class="category-section">
+        <h2 class="category-title">Breakfast</h2>
+        <div class="menu-list">
+            <div class="menu-row"><span class="item-name">Jam Toast</span><span class="item-price">40</span></div>
+            <div class="menu-row"><span class="item-name">Bread Butter Toast</span><span class="item-price">40</span></div>
+            <div class="menu-row"><span class="item-name">Plain Bread Slice (4 Pcs.)</span><span class="item-price">30</span></div>
+            <div class="menu-row"><span class="item-name">Crispy Veg Pakoda</span><span class="item-price">90</span></div>
+            <div class="menu-row"><span class="item-name">Crispy Onion Pakoda</span><span class="item-price">90</span></div>
+            <div class="menu-row"><span class="item-name">Bread Pakoda</span><span class="item-price">65</span></div>
+            <div class="menu-row"><span class="item-name">Paneer Pakoda</span><span class="item-price">105</span></div>
+            <div class="menu-row"><span class="item-name">Aloo Paratha with Butter</span><span class="item-price">65</span></div>
+            <div class="menu-row"><span class="item-name">Onion Paratha with Butter</span><span class="item-price">65</span></div>
+            <div class="menu-row"><span class="item-name">Paneer Paratha with Butter</span><span class="item-price">90</span></div>
+            <div class="menu-row"><span class="item-name">Mix Veg Paratha</span><span class="item-price">95</span></div>
+            <div class="menu-row"><span class="item-name">Classic Poha</span><span class="item-price">50</span></div>
+            <div class="menu-row"><span class="item-name">Cholle Bhature</span><span class="item-price">90</span></div>
+            <div class="menu-row"><span class="item-name">Puri Bhaji</span><span class="item-price">80</span></div>
+            <div class="menu-row"><span class="item-name">Kachori Chaat</span><span class="item-price">80</span></div>
+            <div class="menu-row"><span class="item-name">Samosa Chaat</span><span class="item-price">80</span></div>
+        </div>
+    </section>
+
+    <section id="maggi" class="category-section">
+        <h2 class="category-title">Maggi, Pasta & Momos</h2>
+        <div class="menu-list">
+            <div class="menu-row"><span class="item-name">Classic Maggi</span><span class="item-price">30</span></div>
+            <div class="menu-row"><span class="item-name">Veg Maggi</span><span class="item-price">50</span></div>
+            <div class="menu-row"><span class="item-name">Cheese Maggi</span><span class="item-price">60</span></div>
+            <div class="menu-row"><span class="item-name">Veg Cheese Maggi</span><span class="item-price">80</span></div>
+            <div class="menu-row"><span class="item-name">Creamy White Sauce Pasta</span><span class="item-price">150</span></div>
+            <div class="menu-row"><span class="item-name">Tangy Red Sauce Pasta</span><span class="item-price">160</span></div>
+            <div class="menu-row"><span class="item-name">Pink Sauce Pasta</span><span class="item-price">160</span></div>
+            <div class="menu-row"><span class="item-name">Steamed Veg Momos</span><span class="item-price">90</span></div>
+            <div class="menu-row"><span class="item-name">Fried Veg Momos</span><span class="item-price">110</span></div>
+        </div>
+    </section>
+
+    <section id="pizza" class="category-section">
+        <h2 class="category-title">Pizza & Burger</h2>
+        <div class="menu-list">
+            <div class="menu-row"><span class="item-name">Garlic Bread Toast</span><span class="item-price">100</span></div>
+            <div class="menu-row"><span class="item-name">Garlic BOT</span><span class="item-price">240</span></div>
+            <div class="menu-row"><span class="item-name">Classic OTC Pizza</span><span class="item-price">150</span></div>
+            <div class="menu-row"><span class="item-name">Onion & Capsicum Pizza</span><span class="item-price">150</span></div>
+            <div class="menu-row"><span class="item-name">Paneer Tandoori Pizza</span><span class="item-price">190</span></div>
+            <div class="menu-row"><span class="item-name">Classic Paneer Pizza</span><span class="item-price">170</span></div>
+            <div class="menu-row"><span class="item-name">Mushroom Delight Pizza</span><span class="item-price">190</span></div>
+            <div class="menu-row"><span class="item-name">Cheese & Corn Pizza</span><span class="item-price">120</span></div>
+            <div class="menu-row"><span class="item-name">Chef's Special Loaded Pizza</span><span class="item-price">280</span></div>
+            <div class="menu-row"><span class="item-name">Classic Veg Burger</span><span class="item-price">60</span></div>
+            <div class="menu-row"><span class="item-name">Aloo Tikki Burger</span><span class="item-price">50</span></div>
+            <div class="menu-row"><span class="item-name">Tandoori Veg Burger</span><span class="item-price">100</span></div>
+        </div>
+    </section>
+
+    <section id="sandwich" class="category-section">
+        <h2 class="category-title">Sandwiches</h2>
+        <div class="menu-list">
+            <div class="menu-row"><span class="item-name">Classic Veg Sandwich</span><span class="item-price">60</span></div>
+            <div class="menu-row"><span class="item-name">Veg Cheese Sandwich</span><span class="item-price">80</span></div>
+            <div class="menu-row"><span class="item-name">Grilled Veg Sandwich</span><span class="item-price">90</span></div>
+            <div class="menu-row"><span class="item-name">Grilled Cheese Sandwich</span><span class="item-price">100</span></div>
+            <div class="menu-row"><span class="item-name">Grilled Veg Cheese Sandwich</span><span class="item-price">110</span></div>
+            <div class="menu-row"><span class="item-name">Cheese & Corn Sandwich</span><span class="item-price">120</span></div>
+            <div class="menu-row"><span class="item-name">Paneer Sandwich</span><span class="item-price">120</span></div>
+            <div class="menu-row"><span class="item-name">Paneer Cheese Corn Sandwich</span><span class="item-price">150</span></div>
+            <div class="menu-row"><span class="item-name">Aloo Masala Sandwich</span><span class="item-price">100</span></div>
+        </div>
+    </section>
+
+    <section id="chinese" class="category-section">
+        <h2 class="category-title">Chinese</h2>
+        <div class="menu-list">
+            <div class="menu-row"><span class="item-name">Veg Fried Rice</span><span class="item-price">110</span></div>
+            <div class="menu-row"><span class="item-name">Paneer Fried Rice</span><span class="item-price">130</span></div>
+            <div class="menu-row"><span class="item-name">Veg Chowmein</span><span class="item-price">130</span></div>
+            <div class="menu-row"><span class="item-name">Garlic Noodles</span><span class="item-price">130</span></div>
+            <div class="menu-row"><span class="item-name">Schezwan Noodles</span><span class="item-price">150</span></div>
+            <div class="menu-row"><span class="item-name">Hakka Noodles</span><span class="item-price">140</span></div>
+            <div class="menu-row"><span class="item-name">American Chopsuey</span><span class="item-price">160</span></div>
+            <div class="menu-row"><span class="item-name">Honey Chilli Potato</span><span class="item-price">170</span></div>
+            <div class="menu-row"><span class="item-name">Paneer Chowmein</span><span class="item-price">150</span></div>
+            <div class="menu-row"><span class="item-name">Chilli Paneer (Dry)</span><span class="item-price">150</span></div>
+            <div class="menu-row"><span class="item-name">Chilli Paneer (Gravy)</span><span class="item-price">170</span></div>
+            <div class="menu-row"><span class="item-name">Veg Manchurian (Dry)</span><span class="item-price">170</span></div>
+            <div class="menu-row"><span class="item-name">Veg Manchurian (Gravy)</span><span class="item-price">180</span></div>
+            <div class="menu-row"><span class="item-name">Singapuri Noodles</span><span class="item-price">150</span></div>
+            <div class="menu-row"><span class="item-name">Singapuri Fried Rice</span><span class="item-price">180</span></div>
+            <div class="menu-row"><span class="item-name">Paneer 65</span><span class="item-price">180</span></div>
+        </div>
+    </section>
+
+    <section id="salad" class="category-section">
+        <h2 class="category-title">Salad, Raita & Papad</h2>
+        <div class="menu-list">
+            <div class="menu-row"><span class="item-name">Russian Salad</span><span class="item-price">90</span></div>
+            <div class="menu-row"><span class="item-name">Green Salad</span><span class="item-price">40</span></div>
+            <div class="menu-row"><span class="item-name">Onion Salad</span><span class="item-price">30</span></div>
+            <div class="menu-row"><span class="item-name">Spicy Kachumbar Salad</span><span class="item-price">60</span></div>
+            <div class="menu-row"><span class="item-name">Fry Chilli</span><span class="item-price">40</span></div>
+            <div class="menu-row"><span class="item-name">Boondi Raita</span><span class="item-price">50</span></div>
+            <div class="menu-row"><span class="item-name">Veg Raita</span><span class="item-price">65</span></div>
+            <div class="menu-row"><span class="item-name">Masala Raita</span><span class="item-price">70</span></div>
+            <div class="menu-row"><span class="item-name">Fruit Raita</span><span class="item-price">70</span></div>
+            <div class="menu-row"><span class="item-name">Papad Fried</span><span class="item-price">30</span></div>
+            <div class="menu-row"><span class="item-name">Papad Roasted</span><span class="item-price">25</span></div>
+            <div class="menu-row"><span class="item-name">Masala Papad Fried</span><span class="item-price">45</span></div>
+            <div class="menu-row"><span class="item-name">Masala Papad Roasted</span><span class="item-price">30</span></div>
+        </div>
+    </section>
+
+    <section id="dahi" class="category-section">
+        <h2 class="category-title">Dahi Drinks</h2>
+        <div class="menu-list">
+            <div class="menu-row"><span class="item-name">Lassi (Sweet/Salted)</span><span class="item-price">55</span></div>
+            <div class="menu-row"><span class="item-name">Butter Milk</span><span class="item-price">30</span></div>
+            <div class="menu-row"><span class="item-name">Curd</span><span class="item-price">40</span></div>
+        </div>
+    </section>
+
+    <section id="indian" class="category-section">
+        <h2 class="category-title">Indian Main Course</h2>
+        
+        <h3 class="sub-category-title">Vegetables</h3>
+        <div class="menu-list">
+            <div class="menu-row"><span class="item-name">Aloo Mutter</span><span class="item-price">140</span></div>
+            <div class="menu-row"><span class="item-name">Malai Pyaaz</span><span class="item-price">140</span></div>
+            <div class="menu-row"><span class="item-name">Aloo Pudina</span><span class="item-price">140</span></div>
+            <div class="menu-row"><span class="item-name">Methi Malai Mutter</span><span class="item-price">140</span></div>
+            <div class="menu-row"><span class="item-name">Mix Veg</span><span class="item-price">140</span></div>
+            <div class="menu-row"><span class="item-name">Gatta Masala</span><span class="item-price">140</span></div>
+            <div class="menu-row"><span class="item-name">Channa Masala</span><span class="item-price">140</span></div>
+            <div class="menu-row"><span class="item-name">Veg Kolhapuri</span><span class="item-price">140</span></div>
+            <div class="menu-row"><span class="item-name">Sev Tamatar</span><span class="item-price">140</span></div>
+            <div class="menu-row"><span class="item-name">Veg Jaalfrezi</span><span class="item-price">150</span></div>
+            <div class="menu-row"><span class="item-name">Corn Palak</span><span class="item-price">140</span></div>
+            <div class="menu-row"><span class="item-name">Kaju Curry</span><span class="item-price">180</span></div>
+            <div class="menu-row"><span class="item-name">Mushroom Masala</span><span class="item-price">180</span></div>
+            <div class="menu-row"><span class="item-name">Mushroom Kolhapuri</span><span class="item-price">180</span></div>
+            <div class="menu-row"><span class="item-name">Navaratan Korma</span><span class="item-price">180</span></div>
+            <div class="menu-row"><span class="item-name">Stuffed Tamatar</span><span class="item-price">160</span></div>
+            <div class="menu-row"><span class="item-name">Banarasi Dum Aloo</span><span class="item-price">180</span></div>
+            <div class="menu-row"><span class="item-name">Veg Egg Curry</span><span class="item-price">180</span></div>
+        </div>
+
+        <h3 class="sub-category-title">Paneer & Kofta</h3>
+        <div class="menu-list">
+            <div class="menu-row"><span class="item-name">Paneer Burji</span><span class="item-price">190</span></div>
+            <div class="menu-row"><span class="item-name">Paneer Butter Masala</span><span class="item-price">190</span></div>
+            <div class="menu-row"><span class="item-name">Palak Paneer</span><span class="item-price">190</span></div>
+            <div class="menu-row"><span class="item-name">Paneer Lababdar</span><span class="item-price">200</span></div>
+            <div class="menu-row"><span class="item-name">Paneer Tikka Masala</span><span class="item-price">200</span></div>
+            <div class="menu-row"><span class="item-name">Mutter Paneer</span><span class="item-price">180</span></div>
+            <div class="menu-row"><span class="item-name">Kadai Paneer</span><span class="item-price">200</span></div>
+            <div class="menu-row"><span class="item-name">Paneer Smokie</span><span class="item-price">240</span></div>
+            <div class="menu-row"><span class="item-name">Paneer Peshawari</span><span class="item-price">210</span></div>
+            <div class="menu-row"><span class="item-name">Methi Malai Paneer</span><span class="item-price">190</span></div>
+            <div class="menu-row"><span class="item-name">Handi Paneer</span><span class="item-price">190</span></div>
+            <div class="menu-row"><span class="item-name">Paneer Do Pyaaza</span><span class="item-price">190</span></div>
+            <div class="menu-row"><span class="item-name">Paneer Pasanda</span><span class="item-price">190</span></div>
+            <div class="menu-row"><span class="item-name">Malai Kofta</span><span class="item-price">180</span></div>
+            <div class="menu-row"><span class="item-name">Shahi Kofta</span><span class="item-price">200</span></div>
+            <div class="menu-row"><span class="item-name">Cheese Kofta</span><span class="item-price">200</span></div>
+            <div class="menu-row"><span class="item-name">Red Kofta</span><span class="item-price">190</span></div>
+        </div>
+
+        <h3 class="sub-category-title">Dal & Rice</h3>
+        <div class="menu-list">
+            <div class="menu-row"><span class="item-name">Dal Fry</span><span class="item-price">100</span></div>
+            <div class="menu-row"><span class="item-name">Dal Tadka</span><span class="item-price">110</span></div>
+            <div class="menu-row"><span class="item-name">Dal Handi</span><span class="item-price">120</span></div>
+            <div class="menu-row"><span class="item-name">Dal Makhani</span><span class="item-price">120</span></div>
+            <div class="menu-row"><span class="item-name">Plain Rice</span><span class="item-price">60</span></div>
+            <div class="menu-row"><span class="item-name">Jeera Rice</span><span class="item-price">80</span></div>
+            <div class="menu-row"><span class="item-name">Mutter Pulao</span><span class="item-price">90</span></div>
+            <div class="menu-row"><span class="item-name">Kashmir Veg Biryani</span><span class="item-price">110</span></div>
+            <div class="menu-row"><span class="item-name">Veg Pulao</span><span class="item-price">100</span></div>
+            <div class="menu-row"><span class="item-name">Veg Biryani</span><span class="item-price">120</span></div>
+        </div>
+
+        <h3 class="sub-category-title">Indian Bread</h3>
+        <div class="menu-list">
+            <div class="menu-row"><span class="item-name">Tawa Roti Plain</span><span class="item-price">20</span></div>
+            <div class="menu-row"><span class="item-name">Tawa Roti Butter</span><span class="item-price">25</span></div>
+            <div class="menu-row"><span class="item-name">Tandoori Roti Plain</span><span class="item-price">25</span></div>
+            <div class="menu-row"><span class="item-name">Tandoori Roti Butter</span><span class="item-price">30</span></div>
+            <div class="menu-row"><span class="item-name">Plain Naan</span><span class="item-price">30</span></div>
+            <div class="menu-row"><span class="item-name">Butter Naan</span><span class="item-price">35</span></div>
+            <div class="menu-row"><span class="item-name">Garlic Naan</span><span class="item-price">50</span></div>
+            <div class="menu-row"><span class="item-name">Cheese Naan</span><span class="item-price">60</span></div>
+            <div class="menu-row"><span class="item-name">Stuffed Naan</span><span class="item-price">60</span></div>
+            <div class="menu-row"><span class="item-name">Missi Roti</span><span class="item-price">30</span></div>
+            <div class="menu-row"><span class="item-name">Laccha Paratha</span><span class="item-price">45</span></div>
+        </div>
+    </section>
+
+    <section id="kulfi" class="category-section">
+        <h2 class="category-title">Nasirabad Special Kulfi</h2>
+        <div class="menu-list">
+            <div class="menu-row"><span class="item-name">Kesar Pista Kulfi (S / M)</span><span class="item-price">30 / 50</span></div>
+            <div class="menu-row"><span class="item-name">Pista Badam Kulfi (S / M)</span><span class="item-price">30 / 50</span></div>
+            <div class="menu-row"><span class="item-name">Mango Kulfi (S / M)</span><span class="item-price">30 / 50</span></div>
+            <div class="menu-row"><span class="item-name">Chocolate Kulfi (S / M)</span><span class="item-price">30 / 50</span></div>
+            <div class="menu-row"><span class="item-name">Paan Masala Kulfi (S / M)</span><span class="item-price">30 / 50</span></div>
+        </div>
+    </section>
+
+    <section id="shakes" class="category-section">
+        <h2 class="category-title">Mojito & Shakes</h2>
+        <div class="menu-list">
+            <div class="menu-row"><span class="item-name">Verjin Mojito</span><span class="item-price">110</span></div>
+            <div class="menu-row"><span class="item-name">Watermelon Mojito</span><span class="item-price">100</span></div>
+            <div class="menu-row"><span class="item-name">Cold Coffee</span><span class="item-price">110</span></div>
+            <div class="menu-row"><span class="item-name">KitKat Shake</span><span class="item-price">130</span></div>
+            <div class="menu-row"><span class="item-name">Chocolate Shake</span><span class="item-price">120</span></div>
+            <div class="menu-row"><span class="item-name">Vanilla Shake</span><span class="item-price">100</span></div>
+            <div class="menu-row"><span class="item-name">Oreo Shake</span><span class="item-price">130</span></div>
+            <div class="menu-row"><span class="item-name">Hotel Yashoday Special</span><span class="item-price">140</span></div>
+            <div class="menu-row"><span class="item-name">Bournvita Shake</span><span class="item-price">110</span></div>
+            <div class="menu-row"><span class="item-name">Banana Shake</span><span class="item-price">120</span></div>
+        </div>
+    </section>
+
+    <section id="icecream" class="category-section">
+        <h2 class="category-title">Ice Cream</h2>
+        <div class="menu-list">
+            <div class="menu-row"><span class="item-name">Vanilla</span><span class="item-price">40</span></div>
+            <div class="menu-row"><span class="item-name">Chocolate</span><span class="item-price">50</span></div>
+            <div class="menu-row"><span class="item-name">Strawberry</span><span class="item-price">50</span></div>
+            <div class="menu-row"><span class="item-name">Butterscotch</span><span class="item-price">50</span></div>
+            <div class="menu-row"><span class="item-name">American Nuts</span><span class="item-price">50</span></div>
+            <div class="menu-row"><span class="item-name">Kesar Pista</span><span class="item-price">50</span></div>
+            <div class="menu-row"><span class="item-name">Rajbhog</span><span class="item-price">50</span></div>
+            <div class="menu-row"><span class="item-name">Shahi Kesar</span><span class="item-price">50</span></div>
+            <div class="menu-row"><span class="item-name">Badam Elaichi</span><span class="item-price">50</span></div>
+            <div class="menu-row"><span class="item-name">Choco Chips</span><span class="item-price">50</span></div>
+        </div>
+    </section>
+
+    <section id="dessert" class="category-section">
+        <h2 class="category-title">Desserts – Kuch Meetha Ho Jaye</h2>
+        <div class="menu-list">
+            <div class="menu-row"><span class="item-name">Gulab Jamun (4 Pcs.)</span><span class="item-price">70</span></div>
+            <div class="menu-row"><span class="item-name">Gulab Jamun with Ice Cream</span><span class="item-price">110</span></div>
+            <div class="menu-row"><span class="item-name">Rasgulla (4 Pcs.)</span><span class="item-price">70</span></div>
+            <div class="menu-row"><span class="item-name">Rabri</span><span class="item-price">80</span></div>
+        </div>
+    </section>
+
+    <div class="contact-card">
+        <h3 style="color: var(--accent); margin-bottom: 15px; font-family: 'Playfair Display', serif;">HOTEL YASHODAY & ROOFTOP CAFÉ</h3>
+        <p>📍 Yashoda Tower, Infront of Reliance-Jio Petrol Pump,<br>Ajmer Road, Kekri, Rajasthan</p>
+        <p style="margin-top: 15px;">📞 92512-69294, 94131-53831</p>
+        <p>📸 Instagram: @hotel_yashoday</p>
+    </div>
+
+</div>
+
+<footer>
+    <p>&copy; 2026 Hotel Yashoday. All Rights Reserved.</p>
+    <p><small>Prices are in ₹ (INR)</small></p>
+</footer>
+
+</body>
+</html>
